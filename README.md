@@ -1,7 +1,5 @@
 [![Pub Version](https://img.shields.io/pub/v/chatwoot_client_sdk?color=blueviolet)](https://pub.dev/packages/chatwoot_sdk)
 
-# Integrate Chatwoot with Flutter app
-
 Integrate Chatwoot flutter client into your flutter app and talk to your visitors in real time. [Chatwoot](https://github.com/chatwoot/chatwoot) helps you to chat with your visitors and provide exceptional support in real time. To use Chatwoot in your flutter app, follow the steps described below.
 
 <img src="https://user-images.githubusercontent.com/22669874/225545427-bd3fe38c-d116-4286-b542-67b03a51e2d2.jpg" alt="chatwoot screenshot" height="560"/>
@@ -22,8 +20,8 @@ to your project's [pubspec.yml](https://flutter.dev/docs/development/tools/pubsp
 
 ### a. Using ChatwootWidget
 
-* Create a website channel in chatwoot server by following the steps described here https://www.chatwoot.com/docs/channels/website
-* Replace websiteToken prop and baseUrl
+- Create a website channel in chatwoot server by following the steps described here https://www.chatwoot.com/docs/channels/website
+- Replace websiteToken prop and baseUrl
 
 ```dart
 import 'dart:io';
@@ -132,11 +130,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Horray! You're done.
 
-
 #### Available Parameters
 
 | Name             | Default | Type                            | Description                                                                                            |
-|------------------|---------|---------------------------------|--------------------------------------------------------------------------------------------------------|
+| ---------------- | ------- | ------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | websiteToken     | -       | String                          | Website inbox channel token                                                                            |
 | baseUrl          | -       | String                          | Installation url for chatwoot                                                                          |
 | user             | -       | ChatwootUser                    | User information about the user like email, username and avatar_url                                    |
@@ -149,9 +146,9 @@ Horray! You're done.
 | onLoadCompleted  | -       | void Function()                 | Widget Load completed event                                                                            |
 
 ### b. Using Chatwoot Client
-* Create an Api inbox in Chatwoot. Refer to [Create API Channel](https://www.chatwoot.com/docs/product/channels/api/create-channel) document.
-* Create your own customized chat ui and use `ChatwootClient` to load and sendMessages. Messaging events like `onMessageSent` and `onMessageReceived` will be triggered on `ChatwootCallback` argument passed when creating the client instance.
 
+- Create an Api inbox in Chatwoot. Refer to [Create API Channel](https://www.chatwoot.com/docs/product/channels/api/create-channel) document.
+- Create your own customized chat ui and use `ChatwootClient` to load and sendMessages. Messaging events like `onMessageSent` and `onMessageReceived` will be triggered on `ChatwootCallback` argument passed when creating the client instance.
 
 NB: This chatwoot client uses [Hive](https://pub.dev/packages/hive) for local storage.
 
@@ -208,7 +205,7 @@ final chatwootCallbacks = ChatwootCallbacks(
 #### Available Parameters
 
 | Name              | Default | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|-------------------|---------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------- | ------- | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | baseUrl           | -       | String            | Installation url for chatwoot                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | inboxIdentifier   | -       | String            | Identifier for target chatwoot inbox                                                                                                                                                                                                                                                                                                                                                                                                               |
 | enablePersistance | true    | bool              | Enables persistence of chatwoot client instance's contact, conversation and messages to disk <br>for convenience.<br>true - persists chatwoot client instance's data(contact, conversation and messages) to disk. To clear persisted <br>data call ChatwootClient.clearData or ChatwootClient.clearAllData<br>false - holds chatwoot client instance's data in memory and is cleared as<br>soon as chatwoot client instance is disposed<br>Setting |
