@@ -42,11 +42,15 @@ class ChatwootL10n extends ChatL10n {
       this.conversationResolvedMessage =
           "Your ticket has been marked as resolved"})
       : super(
-            attachmentButtonAccessibilityLabel:
-                attachmentButtonAccessibilityLabel,
-            emptyChatPlaceholder: emptyChatPlaceholder,
-            unreadMessagesLabel: offlineText,
-            fileButtonAccessibilityLabel: fileButtonAccessibilityLabel,
-            inputPlaceholder: inputPlaceholder,
-            sendButtonAccessibilityLabel: sendButtonAccessibilityLabel);
+          attachmentButtonAccessibilityLabel:
+              attachmentButtonAccessibilityLabel,
+          emptyChatPlaceholder: emptyChatPlaceholder,
+          unreadMessagesLabel: offlineText,
+          fileButtonAccessibilityLabel: fileButtonAccessibilityLabel,
+          inputPlaceholder: inputPlaceholder,
+          sendButtonAccessibilityLabel: sendButtonAccessibilityLabel,
+          and: '',
+          isTyping: '',
+          others: '',
+        );
 }

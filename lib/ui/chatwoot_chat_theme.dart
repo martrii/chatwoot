@@ -109,6 +109,7 @@ class ChatwootChatTheme extends ChatTheme {
       height: 1.333,
     ),
   }) : super(
+          messageMaxWidth: 600,
           attachmentButtonIcon: attachmentButtonIcon,
           backgroundColor: backgroundColor,
           attachmentButtonMargin: EdgeInsets.zero,
